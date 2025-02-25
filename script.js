@@ -6,12 +6,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function selectOption(option) {
         document.getElementById("dropdownButton").innerText = option;
-        let descriptionText = option === "Student" 
-            ? "Currently an MEng CS candidate at Cornell Tech. Recent graduate of Stony Brook University studying Applied Mathematics and Statistics."
-            : "Previous software engineer intern at North Atlantic Industries and data science intern at Outreach New York.";
+        let descriptionElement = document.getElementById("description");
+        let artButton = document.getElementById("artButton");
 
-        document.getElementById("description").innerText = descriptionText;
-
+        if (option === "Student") {
+            descriptionElement.innerText = "Currently an MEng CS candidate at Cornell Tech. Recent graduate of Stony Brook University studying Applied Mathematics and Statistics.";
+            artButton.classList.add("hidden"); // Hide art button
+        } else if (option === "Developer") {
+            descriptionElement.innerText = "Previous Software Engineer Intern at North Atlantic Industries and Data Science Intern at Outreach New York.";
+            artButton.classList.add("hidden"); // Hide art button
+        } else if (option === "Art Enthusiast") {
+            descriptionElement.innerText = "Test your luck with some art from my favorite museum, Metropolitan Museum of Art";
+            artButton.classList.remove("hidden"); // Show art button
+        }
+        
         document.getElementById("dropdownContent").style.display = "none"; // Hide dropdown
     }
 
@@ -20,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!event.target.closest(".dropdown")) {
             dropdown.style.display = "none";
         }
+    });
+
+    document.getElementById("artButton").addEventListener("click", function(event) {
+        
     });
 
     // Expose function globally if needed
