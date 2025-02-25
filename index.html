@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to My Website</h1>
-    </div>
-    <img src="images/apple-avatar.jpg" alt="My Picture">
+    <main>
+        <div class="header">
+            <h1>Hi, my name is Avery</h1>
+        </div>
+
+        <img src="images/apple-avatar.jpg" alt="My Picture">
+
+        <div class="header-container">
+            <h1>I am a </h1>
+            <div class="dropdown">
+                <button id="dropdownButton">...</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <div onclick="selectOption('Student')">Student</div>
+                    <div onclick="selectOption('Developer')">Developer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description" id="description"></div>
+        
+        <!--<div class="bio">
+            <p>I'm a MEng CS candidate at Cornell Tech.
+                I'm interested in full-stack software development, ML/AI, and data engineering.
+                In my free time, I enjoy making music, working out, and exploring cities.
+            </p>
+        </div>-->
+    </main>
     
-    <div class="bio">
-        <h2>About Me</h2>
-        <p>Hi! I'm Avery. I'm currently a MEng CS candidate at Cornell Tech.
-            I'm interested in full-stack software development, ML/AI, and data engineering.
-        </p>
-        <p>In my free time, I enjoy making music, working out, and exploring cities.</p>
-    </div>
 </body>
 </html>
