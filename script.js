@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function selectOption(option) {
+        const artImage = document.getElementById("artImage");
+        artImage.innerHTML = "";
+        
         document.getElementById("dropdownButton").innerText = option;
         let descriptionElement = document.getElementById("description");
         let artButton = document.getElementById("artButton");

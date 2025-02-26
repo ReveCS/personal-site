@@ -1,3 +1,12 @@
+/*
+Some CSS properties I used that were not covered in class were animation and linear-gradient for the background.
+
+I learned that I had to define an animation, such as float, where you describe where and how much the object moves at 
+different percentages. It was new to me and surprisingly intuitive, and I made my image bob vertically by 10px.
+
+With linear-gradient, I had to describe how much the gradient was tilted, as well as the colors and order of the gradient.
+*/
+
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
